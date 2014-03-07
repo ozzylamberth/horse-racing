@@ -36,6 +36,8 @@ namespace Shell
                 venta.ValorCop = this.View.ValorApuesta * this.View.TRM;
                 venta.IVA = this.View.ValorApuesta * this.View.TRM * this.View.IVA;
                 venta.ValorAdm = this.View.ValoAdm * this.View.ValorApuesta;
+                venta.ValorPagado = 0;
+                venta.FechaPago = DateTime.Today;
                 objV.Guardar(venta);
                 this.View.idUltimaVenta = venta.Id;                
             }
