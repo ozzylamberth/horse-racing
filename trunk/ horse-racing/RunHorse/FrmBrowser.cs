@@ -276,10 +276,16 @@ namespace RunHorse
                 this.Carrera = DatosV[3];
                 this.TipoApuesta = DatosV[5];
                 this.Seleccion = DatosV[6];
+
                 this.Presenter.TicketExiste();
                 if (this.TicketExiste)
                 {
                     MessageBox.Show("El Ticket ya fue Impreso, La impresión fue Cancelada", "Horse Racing Soft 2.0", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+                if (this.NumTicket == null || this.NumTicket == "")
+                {
+                    MessageBox.Show("No se puede imprimir el ticket aún, intentelo nuevamente", "Horse Racing Soft 2.0", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
                 ventas venta = objVen.ObtenerVentaporId(this.idUltimaVenta);
@@ -517,7 +523,7 @@ namespace RunHorse
             }
             if (DatosV.Count > 0)
                 if (DatosV[4].Replace("Serial #: ", "") != this.NumTicket)
-                {                    
+                {
                     PuedeImprimir = true;
                     this.menuItemImprimir.Enabled = true;
                     this.timer1.Stop();
