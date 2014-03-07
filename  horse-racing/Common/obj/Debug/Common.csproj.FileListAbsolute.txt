@@ -1,0 +1,10 @@
+D:\Proyectos\RunHorse\Common\bin\Debug\Common.dll
+D:\Proyectos\RunHorse\Common\bin\Debug\Common.pdb
+D:\Proyectos\RunHorse\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RunHorse\Common\obj\Debug\Common.dll
+D:\Proyectos\RunHorse\Common\obj\Debug\Common.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\bin\Debug\Common.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\bin\Debug\Common.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\Common.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\Common.pdb

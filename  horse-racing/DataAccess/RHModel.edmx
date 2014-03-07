@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="apuestasModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="apuestasModelStoreContainer">
+          <EntitySet Name="entidad" EntityType="apuestasModel.Store.entidad" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="menu" EntityType="apuestasModel.Store.menu" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="menuperfiles" EntityType="apuestasModel.Store.menuperfiles" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="numerosfacturas" EntityType="apuestasModel.Store.numerosfacturas" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="parametros_app" EntityType="apuestasModel.Store.parametros_app" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="perfiles" EntityType="apuestasModel.Store.perfiles" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="usuario" EntityType="apuestasModel.Store.usuario" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="usuariomenu" EntityType="apuestasModel.Store.usuariomenu" store:Type="Tables" Schema="apuestas" />
+          <EntitySet Name="ventas" EntityType="apuestasModel.Store.ventas" store:Type="Tables" Schema="apuestas" />
+          <AssociationSet Name="fk_Menu_has_Perfiles_Menu1" Association="apuestasModel.Store.fk_Menu_has_Perfiles_Menu1">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="menuperfiles" EntitySet="menuperfiles" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Menu_has_Perfiles_Perfiles1" Association="apuestasModel.Store.fk_Menu_has_Perfiles_Perfiles1">
+            <End Role="perfiles" EntitySet="perfiles" />
+            <End Role="menuperfiles" EntitySet="menuperfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PadreId" Association="apuestasModel.Store.FK_PadreId">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="menu1" EntitySet="menu" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Usuario_has_Menu_Menu1" Association="apuestasModel.Store.fk_Usuario_has_Menu_Menu1">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="usuariomenu" EntitySet="usuariomenu" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Usuario_has_Menu_Usuario1" Association="apuestasModel.Store.fk_Usuario_has_Menu_Usuario1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="usuariomenu" EntitySet="usuariomenu" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ventas_Usuario" Association="apuestasModel.Store.fk_Ventas_Usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="ventas" EntitySet="ventas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="entidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Nit" Type="varchar" MaxLength="45" />
+          <Property Name="Eslogan" Type="varchar" MaxLength="500" />
+          <Property Name="CupoDisponible" Type="decimal" Precision="16" Scale="2" />
+        </EntityType>
+        <EntityType Name="menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="varchar" MaxLength="100" />
+          <Property Name="NombreForm" Type="varchar" MaxLength="100" />
+          <Property Name="PadreId" Type="int" />
+          <Property Name="MenuText" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="menuperfiles">
+          <Key>
+            <PropertyRef Name="Menu_Id" />
+            <PropertyRef Name="Perfiles_Id" />
+          </Key>
+          <Property Name="Menu_Id" Type="int" Nullable="false" />
+          <Property Name="Perfiles_Id" Type="guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="numerosfacturas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Resolucion" Type="varchar" MaxLength="255" />
+          <Property Name="NumInicia" Type="int" />
+          <Property Name="NumFinal" Type="int" />
+          <Property Name="NumActual" Type="int" />
+          <Property Name="Estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="parametros_app">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+          <Property Name="Valor" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="perfiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="guid" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="guid" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="45" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="45" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Estado" Type="bool" />
+          <Property Name="CupoDiario" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="IdPerfil" Type="guid" />
+          <Property Name="IdUltimaVenta" Type="guid" />
+        </EntityType>
+        <EntityType Name="usuariomenu">
+          <Key>
+            <PropertyRef Name="Usuario_Id" />
+            <PropertyRef Name="Menu_Id" />
+          </Key>
+          <Property Name="Usuario_Id" Type="guid" Nullable="false" />
+          <Property Name="Menu_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ventas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="guid" Nullable="false" />
+          <Property Name="Usuario_Id" Type="guid" Nullable="false" />
+          <Property Name="Valor" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="Fecha" Type="date" />
+          <Property Name="NumTicket" Type="varchar" MaxLength="100" />
+          <Property Name="ValorCop" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="IVA" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="ValorAdm" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="Seleccion" Type="varchar" MaxLength="255" />
+          <Property Name="TipoApuesta" Type="varchar" MaxLength="100" />
+          <Property Name="Carrera" Type="varchar" MaxLength="255" />
+          <Property Name="NroFactura" Type="int" />
+          <Property Name="ValorPagado" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="FechaPago" Type="date" />
+          <Property Name="Estado" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <Association Name="fk_Menu_has_Perfiles_Menu1">
+          <End Role="menu" Type="apuestasModel.Store.menu" Multiplicity="1" />
+          <End Role="menuperfiles" Type="apuestasModel.Store.menuperfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="menu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="menuperfiles">
+              <PropertyRef Name="Menu_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Menu_has_Perfiles_Perfiles1">
+          <End Role="perfiles" Type="apuestasModel.Store.perfiles" Multiplicity="1" />
+          <End Role="menuperfiles" Type="apuestasModel.Store.menuperfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="perfiles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="menuperfiles">
+              <PropertyRef Name="Perfiles_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PadreId">
+          <End Role="menu" Type="apuestasModel.Store.menu" Multiplicity="0..1" />
+          <End Role="menu1" Type="apuestasModel.Store.menu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="menu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="menu1">
+              <PropertyRef Name="PadreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Usuario_has_Menu_Menu1">
+          <End Role="menu" Type="apuestasModel.Store.menu" Multiplicity="1" />
+          <End Role="usuariomenu" Type="apuestasModel.Store.usuariomenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="menu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuariomenu">
+              <PropertyRef Name="Menu_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Usuario_has_Menu_Usuario1">
+          <End Role="usuario" Type="apuestasModel.Store.usuario" Multiplicity="1" />
+          <End Role="usuariomenu" Type="apuestasModel.Store.usuariomenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuariomenu">
+              <PropertyRef Name="Usuario_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ventas_Usuario">
+          <End Role="usuario" Type="apuestasModel.Store.usuario" Multiplicity="1" />
+          <End Role="ventas" Type="apuestasModel.Store.ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ventas">
+              <PropertyRef Name="Usuario_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="apuestasModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="apuestasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="entidad" EntityType="apuestasModel.entidad" />
+          <EntitySet Name="menu" EntityType="apuestasModel.menu" />
+          <EntitySet Name="parametros_app" EntityType="apuestasModel.parametros_app" />
+          <EntitySet Name="perfiles" EntityType="apuestasModel.perfiles" />
+          <EntitySet Name="usuario" EntityType="apuestasModel.usuario" />
+          <AssociationSet Name="FK_PadreId" Association="apuestasModel.FK_PadreId">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="menu1" EntitySet="menu" />
+          </AssociationSet>
+          <AssociationSet Name="menuperfiles" Association="apuestasModel.menuperfiles">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="perfiles" EntitySet="perfiles" />
+          </AssociationSet>
+          <AssociationSet Name="usuariomenu" Association="apuestasModel.usuariomenu">
+            <End Role="menu" EntitySet="menu" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <EntitySet Name="numerosfacturas" EntityType="apuestasModel.numerosfacturas" />
+          <EntitySet Name="ventas" EntityType="apuestasModel.ventas" />
+          <AssociationSet Name="fk_Ventas_Usuario" Association="apuestasModel.fk_Ventas_Usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="ventas" EntitySet="ventas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="entidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nit" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Eslogan" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="CupoDisponible" />
+        </EntityType>
+        <EntityType Name="menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MenuName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NombreForm" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PadreId" />
+          <Property Type="String" Name="MenuText" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="menu1" Relationship="apuestasModel.FK_PadreId" FromRole="menu" ToRole="menu1" />
+          <NavigationProperty Name="menu2" Relationship="apuestasModel.FK_PadreId" FromRole="menu1" ToRole="menu" />
+          <NavigationProperty Name="perfiles" Relationship="apuestasModel.menuperfiles" FromRole="menu" ToRole="perfiles" />
+          <NavigationProperty Name="usuario" Relationship="apuestasModel.usuariomenu" FromRole="menu" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="parametros_app">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Valor" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="perfiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="menu" Relationship="apuestasModel.menuperfiles" FromRole="perfiles" ToRole="menu" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contraseña" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estado" />
+          <Property Type="Decimal" Name="CupoDiario" />
+          <Property Type="Guid" Name="IdPerfil" />
+          <Property Type="Guid" Name="IdUltimaVenta" />
+          <NavigationProperty Name="menu" Relationship="apuestasModel.usuariomenu" FromRole="usuario" ToRole="menu" />
+          <NavigationProperty Name="ventas" Relationship="apuestasModel.fk_Ventas_Usuario" FromRole="usuario" ToRole="ventas" />
+        </EntityType>
+        <Association Name="FK_PadreId">
+          <End Type="apuestasModel.menu" Role="menu" Multiplicity="0..1" />
+          <End Type="apuestasModel.menu" Role="menu1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="menu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="menu1">
+              <PropertyRef Name="PadreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="menuperfiles">
+          <End Type="apuestasModel.menu" Role="menu" Multiplicity="*" />
+          <End Type="apuestasModel.perfiles" Role="perfiles" Multiplicity="*" />
+        </Association>
+        <Association Name="usuariomenu">
+          <End Type="apuestasModel.menu" Role="menu" Multiplicity="*" />
+          <End Type="apuestasModel.usuario" Role="usuario" Multiplicity="*" />
+        </Association>
+        <EntityType Name="numerosfacturas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Resolucion" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NumInicia" />
+          <Property Type="Int32" Name="NumFinal" />
+          <Property Type="Int32" Name="NumActual" />
+          <Property Type="String" Name="Estado" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ventas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="Usuario_Id" Nullable="false" />
+          <Property Type="Decimal" Name="Valor" />
+          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="String" Name="NumTicket" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ValorCop" />
+          <Property Type="Decimal" Name="IVA" />
+          <Property Type="Decimal" Name="ValorAdm" />
+          <Property Type="String" Name="Seleccion" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoApuesta" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Carrera" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NroFactura" />
+          <Property Type="Decimal" Name="ValorPagado" />
+          <Property Type="DateTime" Name="FechaPago" />
+          <Property Type="String" Name="Estado" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario" Relationship="apuestasModel.fk_Ventas_Usuario" FromRole="ventas" ToRole="usuario" />
+        </EntityType>
+        <Association Name="fk_Ventas_Usuario">
+          <End Type="apuestasModel.usuario" Role="usuario" Multiplicity="1" />
+          <End Type="apuestasModel.ventas" Role="ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ventas">
+              <PropertyRef Name="Usuario_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="apuestasModelStoreContainer" CdmEntityContainer="apuestasEntities">
+          <EntitySetMapping Name="entidad">
+            <EntityTypeMapping TypeName="apuestasModel.entidad">
+              <MappingFragment StoreEntitySet="entidad">
+                <ScalarProperty Name="CupoDisponible" ColumnName="CupoDisponible" />
+                <ScalarProperty Name="Eslogan" ColumnName="Eslogan" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="menu">
+            <EntityTypeMapping TypeName="apuestasModel.menu">
+              <MappingFragment StoreEntitySet="menu">
+                <ScalarProperty Name="MenuText" ColumnName="MenuText" />
+                <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+                <ScalarProperty Name="NombreForm" ColumnName="NombreForm" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="parametros_app">
+            <EntityTypeMapping TypeName="apuestasModel.parametros_app">
+              <MappingFragment StoreEntitySet="parametros_app">
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="perfiles">
+            <EntityTypeMapping TypeName="apuestasModel.perfiles">
+              <MappingFragment StoreEntitySet="perfiles">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="apuestasModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="IdUltimaVenta" ColumnName="IdUltimaVenta" />
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+                <ScalarProperty Name="CupoDiario" ColumnName="CupoDiario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="menuperfiles" TypeName="apuestasModel.menuperfiles" StoreEntitySet="menuperfiles">
+            <EndProperty Name="perfiles">
+              <ScalarProperty Name="Id" ColumnName="Perfiles_Id" />
+            </EndProperty>
+            <EndProperty Name="menu">
+              <ScalarProperty Name="Id" ColumnName="Menu_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="usuariomenu" TypeName="apuestasModel.usuariomenu" StoreEntitySet="usuariomenu">
+            <EndProperty Name="usuario">
+              <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+            </EndProperty>
+            <EndProperty Name="menu">
+              <ScalarProperty Name="Id" ColumnName="Menu_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="numerosfacturas">
+            <EntityTypeMapping TypeName="apuestasModel.numerosfacturas">
+              <MappingFragment StoreEntitySet="numerosfacturas">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NumActual" ColumnName="NumActual" />
+                <ScalarProperty Name="NumFinal" ColumnName="NumFinal" />
+                <ScalarProperty Name="NumInicia" ColumnName="NumInicia" />
+                <ScalarProperty Name="Resolucion" ColumnName="Resolucion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ventas">
+            <EntityTypeMapping TypeName="apuestasModel.ventas">
+              <MappingFragment StoreEntitySet="ventas">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="ValorPagado" ColumnName="ValorPagado" />
+                <ScalarProperty Name="NroFactura" ColumnName="NroFactura" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="TipoApuesta" ColumnName="TipoApuesta" />
+                <ScalarProperty Name="Seleccion" ColumnName="Seleccion" />
+                <ScalarProperty Name="ValorAdm" ColumnName="ValorAdm" />
+                <ScalarProperty Name="IVA" ColumnName="IVA" />
+                <ScalarProperty Name="ValorCop" ColumnName="ValorCop" />
+                <ScalarProperty Name="NumTicket" ColumnName="NumTicket" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Usuario_Id" ColumnName="Usuario_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RHModel">
+        <EntityTypeShape EntityType="apuestasModel.entidad" Width="1.5" PointX="5.75" PointY="0.75" Height="1.9802864583333326" />
+        <EntityTypeShape EntityType="apuestasModel.menu" Width="1.5" PointX="0.75" PointY="2.625" Height="2.7494921875" />
+        <EntityTypeShape EntityType="apuestasModel.parametros_app" Width="1.5" PointX="7.75" PointY="0.75" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="apuestasModel.perfiles" Width="1.5" PointX="3" PointY="1.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="apuestasModel.usuario" Width="1.5" PointX="3" PointY="3.625" Height="3.1340950520833353" />
+        <AssociationConnector Association="apuestasModel.FK_PadreId" >
+          <ConnectorPoint PointX="1.2819230769230767" PointY="5.3744921875" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="5.6244921875" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="5.6244921875" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="5.3744921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="apuestasModel.menuperfiles" >
+          <ConnectorPoint PointX="1.5" PointY="2.625" />
+          <ConnectorPoint PointX="1.5" PointY="1.8749995" />
+          <ConnectorPoint PointX="3" PointY="1.8749995" />
+        </AssociationConnector>
+        <AssociationConnector Association="apuestasModel.usuariomenu" >
+          <ConnectorPoint PointX="2.25" PointY="4.49974609375" />
+          <ConnectorPoint PointX="3" PointY="4.49974609375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="apuestasModel.numerosfacturas" Width="1.5" PointX="0.75" PointY="7.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="apuestasModel.ventas" Width="1.5" PointX="5.25" PointY="4.125" Height="4.0956022135416674" />
+        <AssociationConnector Association="apuestasModel.fk_Ventas_Usuario" >
+          <ConnectorPoint PointX="4.5" PointY="5.4420475260416659" />
+          <ConnectorPoint PointX="5.25" PointY="5.4420475260416659" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

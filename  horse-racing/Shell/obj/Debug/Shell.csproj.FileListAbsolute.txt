@@ -1,0 +1,26 @@
+D:\Proyectos\RunHorse\Shell\bin\Debug\Shell.dll
+D:\Proyectos\RunHorse\Shell\bin\Debug\Shell.pdb
+D:\Proyectos\RunHorse\Shell\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RunHorse\Shell\obj\Debug\Shell.dll
+D:\Proyectos\RunHorse\Shell\obj\Debug\Shell.pdb
+D:\Proyectos\RunHorse\Shell\bin\Debug\BussinesLogic.dll
+D:\Proyectos\RunHorse\Shell\bin\Debug\Common.dll
+D:\Proyectos\RunHorse\Shell\bin\Debug\DataEntities.dll
+D:\Proyectos\RunHorse\Shell\bin\Debug\DataAccess.dll
+D:\Proyectos\RunHorse\Shell\bin\Debug\BussinesLogic.pdb
+D:\Proyectos\RunHorse\Shell\bin\Debug\Common.pdb
+D:\Proyectos\RunHorse\Shell\bin\Debug\DataEntities.pdb
+D:\Proyectos\RunHorse\Shell\bin\Debug\DataAccess.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\obj\Debug\Shell.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\Shell.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\Shell.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\BussinesLogic.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\Common.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataEntities.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataAccess.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\BussinesLogic.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\Common.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataEntities.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataAccess.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\obj\Debug\Shell.dll

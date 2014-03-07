@@ -1,0 +1,16 @@
+D:\Proyectos\RunHorse\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RunHorse\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Proyectos\RunHorse\DataAccess\bin\Debug\DataAccess.dll
+D:\Proyectos\RunHorse\DataAccess\bin\Debug\DataAccess.pdb
+D:\Proyectos\RunHorse\DataAccess\bin\Debug\DataEntities.dll
+D:\Proyectos\RunHorse\DataAccess\bin\Debug\DataEntities.pdb
+D:\Proyectos\RunHorse\DataAccess\obj\Debug\DataAccess.dll
+D:\Proyectos\RunHorse\DataAccess\obj\Debug\DataAccess.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\bin\Debug\DataAccess.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\bin\Debug\DataAccess.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\bin\Debug\DataEntities.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\bin\Debug\DataEntities.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\obj\Debug\DataAccess.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataAccess\obj\Debug\DataAccess.pdb
