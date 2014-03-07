@@ -8,3 +8,8 @@ D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\bin
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\ResolveAssemblyReference.cache
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\Common.dll
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Common\obj\Debug\Common.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Common\bin\Debug\Common.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Common\bin\Debug\Common.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Common\obj\Debug\Common.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Common\obj\Debug\Common.pdb

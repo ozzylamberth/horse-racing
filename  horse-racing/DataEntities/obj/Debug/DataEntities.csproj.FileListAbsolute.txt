@@ -8,3 +8,8 @@ D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntiti
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\ResolveAssemblyReference.cache
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\DataEntities.dll
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\DataEntities.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\DataEntities\bin\Debug\DataEntities.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\DataEntities\bin\Debug\DataEntities.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\DataEntities\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\DataEntities\obj\Debug\DataEntities.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\DataEntities\obj\Debug\DataEntities.pdb

@@ -34,8 +34,8 @@ namespace Shell
                 venta.Usuario_Id = this.View.IdUsuario;
                 venta.Valor = this.View.ValorApuesta;
                 venta.ValorCop = this.View.ValorApuesta * this.View.TRM;
-                venta.IVA = this.View.ValorApuesta * this.View.TRM * this.View.IVA;                
-                venta.ValorAdm = this.View.ValoAdm;
+                venta.IVA = this.View.ValorApuesta * this.View.TRM * this.View.IVA;
+                venta.ValorAdm = this.View.ValoAdm * this.View.ValorApuesta;
                 objV.Guardar(venta);
                 this.View.idUltimaVenta = venta.Id;                
             }

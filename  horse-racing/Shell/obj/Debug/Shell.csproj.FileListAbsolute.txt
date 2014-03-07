@@ -24,3 +24,16 @@ D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataEntities.pdb
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\bin\Debug\DataAccess.pdb
 D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\Shell\obj\Debug\Shell.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\Shell.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\Shell.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\BussinesLogic.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\Common.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\DataEntities.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\DataAccess.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\BussinesLogic.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\Common.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\DataEntities.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\bin\Debug\DataAccess.pdb
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\obj\Debug\Shell.dll
+D:\Proyectos\RepositoriosTrabajo\HorseRacing\ horse-racing\Shell\obj\Debug\Shell.pdb
