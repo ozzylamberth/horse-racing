@@ -1,0 +1,10 @@
+D:\Proyectos\RunHorse\DataEntities\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\RunHorse\DataEntities\bin\Debug\DataEntities.dll
+D:\Proyectos\RunHorse\DataEntities\bin\Debug\DataEntities.pdb
+D:\Proyectos\RunHorse\DataEntities\obj\Debug\DataEntities.dll
+D:\Proyectos\RunHorse\DataEntities\obj\Debug\DataEntities.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\bin\Debug\DataEntities.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\bin\Debug\DataEntities.pdb
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\DataEntities.dll
+D:\Proyectos\InstaladoresProyectos\Horse Racing\CodigoFuente\RunHorse\DataEntities\obj\Debug\DataEntities.pdb

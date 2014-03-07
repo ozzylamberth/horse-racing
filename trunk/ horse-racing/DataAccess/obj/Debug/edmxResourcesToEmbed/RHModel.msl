@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="apuestasModelStoreContainer" CdmEntityContainer="apuestasEntities">
+    <EntitySetMapping Name="entidad">
+      <EntityTypeMapping TypeName="apuestasModel.entidad">
+        <MappingFragment StoreEntitySet="entidad">
+          <ScalarProperty Name="CupoDisponible" ColumnName="CupoDisponible" />
+          <ScalarProperty Name="Eslogan" ColumnName="Eslogan" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menu">
+      <EntityTypeMapping TypeName="apuestasModel.menu">
+        <MappingFragment StoreEntitySet="menu">
+          <ScalarProperty Name="MenuText" ColumnName="MenuText" />
+          <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+          <ScalarProperty Name="NombreForm" ColumnName="NombreForm" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parametros_app">
+      <EntityTypeMapping TypeName="apuestasModel.parametros_app">
+        <MappingFragment StoreEntitySet="parametros_app">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="perfiles">
+      <EntityTypeMapping TypeName="apuestasModel.perfiles">
+        <MappingFragment StoreEntitySet="perfiles">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="apuestasModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="IdUltimaVenta" ColumnName="IdUltimaVenta" />
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="CupoDiario" ColumnName="CupoDiario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="menuperfiles" TypeName="apuestasModel.menuperfiles" StoreEntitySet="menuperfiles">
+      <EndProperty Name="perfiles">
+        <ScalarProperty Name="Id" ColumnName="Perfiles_Id" />
+      </EndProperty>
+      <EndProperty Name="menu">
+        <ScalarProperty Name="Id" ColumnName="Menu_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="usuariomenu" TypeName="apuestasModel.usuariomenu" StoreEntitySet="usuariomenu">
+      <EndProperty Name="usuario">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="menu">
+        <ScalarProperty Name="Id" ColumnName="Menu_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="numerosfacturas">
+      <EntityTypeMapping TypeName="apuestasModel.numerosfacturas">
+        <MappingFragment StoreEntitySet="numerosfacturas">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NumActual" ColumnName="NumActual" />
+          <ScalarProperty Name="NumFinal" ColumnName="NumFinal" />
+          <ScalarProperty Name="NumInicia" ColumnName="NumInicia" />
+          <ScalarProperty Name="Resolucion" ColumnName="Resolucion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ventas">
+      <EntityTypeMapping TypeName="apuestasModel.ventas">
+        <MappingFragment StoreEntitySet="ventas">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+          <ScalarProperty Name="ValorPagado" ColumnName="ValorPagado" />
+          <ScalarProperty Name="NroFactura" ColumnName="NroFactura" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="TipoApuesta" ColumnName="TipoApuesta" />
+          <ScalarProperty Name="Seleccion" ColumnName="Seleccion" />
+          <ScalarProperty Name="ValorAdm" ColumnName="ValorAdm" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="ValorCop" ColumnName="ValorCop" />
+          <ScalarProperty Name="NumTicket" ColumnName="NumTicket" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Usuario_Id" ColumnName="Usuario_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
