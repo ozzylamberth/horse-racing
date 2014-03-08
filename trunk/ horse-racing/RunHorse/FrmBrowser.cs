@@ -133,6 +133,11 @@ namespace RunHorse
                             decimal ValorRestante = Convert.ToDecimal(b);
                             decimal ValorApuestaUsuario = objS.CupoDisponible(GlobalVars.idUsuario);
                             decimal ValorApuestaEntidad = objS.CupoDisponibleEntidad();
+                            if (ValorApuestaC == 0)
+                            {
+                                MessageBox.Show("No se puede hacer una apuesta por USD$0.00. Espere un momento.", "Horse Racing Soft 2.0", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
                             if (a != "" && a != null)
                             {
                                 if (ValorApuestaEntidad >= ValorApuestaC)
@@ -145,7 +150,7 @@ namespace RunHorse
                                             this.Presenter.GuardarApuesta();
                                             this.Opener.ActualizarValorRestante();
                                             this.menuItemImprimir.Enabled = false;
-                                            PuedeImprimir = false;
+                                            this.PuedeImprimir = false;
                                             this.timer1.Enabled = true;
                                             this.timer1.Start();
                                         }
