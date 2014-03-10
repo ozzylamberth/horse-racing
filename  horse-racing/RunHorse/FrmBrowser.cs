@@ -294,6 +294,8 @@ namespace RunHorse
                     return;
                 }
                 ventas venta = objVen.ObtenerVentaporId(this.idUltimaVenta);
+                venta.Valor = decimal.Parse(DatosV[7].Replace("Total: ", "").Replace("$", "").Replace(",", "").Replace(".", System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator));
+                this.Presenter.ActualizarTicketVenta();
                 entidad ent = objS.ObtenerEntidad();
                 if (venta.Valor.Value != decimal.Parse(DatosV[7].Replace("Total: ", "").Replace("$", "").Replace(",", "").Replace(".", System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator)))
                 {
